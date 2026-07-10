@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🤥 Yan Lies</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-slate-100">
+
+    <div class="max-w-5xl mx-auto p-6">
+
+        <!-- Header -->
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-center">
+                🤥 Mentiras do Yan
+            </h1>
+
+            <p class="text-center text-slate-600 mt-2">
+                Banco Nacional de Mentiras do Yan
+            </p>
+        </header>
+
+        <!-- Nova mentira -->
+        <section class="bg-white rounded-xl shadow p-6 mb-8">
+
+            <h2 class="text-xl font-semibold mb-5">
+                Relatar mentira:
+            </h2>
+
+            <form id="lieForm" class="space-y-4">
+
+                <div>
+                    <label class="block mb-2 font-medium">
+                        Mentira
+                    </label>
+
+                    <textarea
+                        id="lie"
+                        rows="3"
+                        required
+                        class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Digite a mentira..."></textarea>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div>
+                        <label class="block mb-2 font-medium">
+                            Data
+                        </label>
+
+                        <input
+                            id="date"
+                            type="date"
+                            required
+                            class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                    </div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition">
+
+                    Salvar
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Histórico -->
+        <section class="bg-white rounded-xl shadow p-6">
+
+            <div class="flex justify-between items-center mb-5">
+
+                <h2 class="text-xl font-semibold">
+                    Histórico
+                </h2>
+
+                <span
+                    id="totalLies"
+                    class="text-sm text-slate-500">
+                    0 mentiras
+                </span>
+
+            </div>
+
+            <div class="overflow-x-auto">
+
+                <table class="min-w-full">
+
+                    <thead>
+
+                        <tr class="border-b">
+
+                            <th class="text-left py-3">
+                                Data
+                            </th>
+
+                            <th class="text-left py-3">
+                                Mentira
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="liesTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>
