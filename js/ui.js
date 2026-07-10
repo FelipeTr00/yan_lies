@@ -31,7 +31,9 @@ export function renderTable(lies) {
 
             tr.innerHTML = `
                 <td class="py-3">
+                    <span class="inline-block bg-slate-200 text-slate-700 text-sm font-medium px-3 py-1 rounded-full">
                     ${formatDate(item.date)}
+                    </span>
                 </td>
 
                 <td class="py-3">
